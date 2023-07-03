@@ -207,24 +207,26 @@
           </tr>
         </thead>
         <tbody>
-          @foreach ($task->components as $key => $component)
-            <tr>
-              <td>{{ $key+1 }}</td>
-              <td>{{ $component->name }}</td>
-              <td class="project-actions text-right">
-                <a class="btn btn-primary btn-xs" href="{{ route('componet_show', ['id' => $component->id]) }}"><i class="fas fa-eye"></i>View</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Template</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Partial</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Schema</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Form Builder</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Model</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Util</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Custom func</a>
-                <a class="btn btn-info btn-xs" href="{{ route('componet_edit', ['t_id' => $component->task_id, 'id' => $component->id]) }}"> <i class="fas fa-pencil-alt"></i> Edit</a>
-                <a class="btn btn-danger btn-xs" href="#"><i class="fas fa-trash"></i>Delete</a>
-              </td>
-            </tr>
-          @endforeach
+          @if ($task->components != '')
+            @foreach ($task->components as $key => $component)
+              <tr>
+                <td>{{ $key+1 }}</td>
+                <td>{{ $component->name }}</td>
+                <td class="project-actions text-right">
+                  <a class="btn btn-primary btn-xs" href="{{ route('componet_show', ['id' => $component->id]) }}"><i class="fas fa-eye"></i>View</a>
+                  <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Template</a>
+                  <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Partial</a>
+                  <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Schema</a>
+                  <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Form Builder</a>
+                  <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Model</a>
+                  <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Util</a>
+                  <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Custom func</a>
+                  <a class="btn btn-info btn-xs" href="{{ route('componet_edit', ['t_id' => $component->task_id, 'id' => $component->id]) }}"> <i class="fas fa-pencil-alt"></i> Edit</a>
+                  <a class="btn btn-danger btn-xs" href="#"><i class="fas fa-trash"></i>Delete</a>
+                </td>
+              </tr>
+            @endforeach
+          @endif
         </tbody>
       </table>
     </div>
