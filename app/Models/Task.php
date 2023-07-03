@@ -29,6 +29,6 @@ class Task extends Model
 
     public function components()
     {
-      return $this->hasMany(components::class);
+      return $this->hasMany(Components::class);
     }
 }

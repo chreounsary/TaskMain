@@ -207,7 +207,7 @@
           </tr>
         </thead>
         <tbody>
-          @if ($task->components != '')
+          @if (isset($task->components))
             @foreach ($task->components as $key => $component)
               <tr>
                 <td>{{ $key+1 }}</td>

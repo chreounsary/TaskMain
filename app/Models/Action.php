@@ -30,9 +30,9 @@ class Action extends Model
 
   public function formBuilder()
   {
-    return $this->hasOne(formBuilder::class);
+    return $this->hasOne(FormBuilder::class);
   }
-
+  #####
   public function getProject($task_id)
   {
     $q = $this->join('tasks', 'tasks.id', '=', 'actions.task_id')
