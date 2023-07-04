@@ -4,7 +4,7 @@
   <div class="box">
     <br>
     <div class="box-header with-border">
-      <a href="{{ route('project_show', ['id' => $actions->id]) }}" title="">
+      <a href="{{ route('project_show', ['id' => $actions->task_id]) }}" title="">
       <button type="button" class="btn btn-default btn-sm collapsed">{{ $actions->name }}</button>  <i class="fa fa-fw fa-angle-double-right"></i>
       </a>
       <button type="button" class="btn btn-default btn-sm collapsed">{{ $actions->name }}</button> <i class="fa fa-fw fa-angle-double-right"></i>

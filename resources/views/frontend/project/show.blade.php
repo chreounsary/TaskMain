@@ -40,7 +40,7 @@
               <td>{{ $key +1 }}</td>
               <td>{{ $task->name }}</td>
               <td class="project-actions">
-                <a class="btn btn-primary btn-xs" href="{{ route('task_show', ['id' => $task->id]) }}"><i class="fas fa-eye"></i>View</a>
+              <a class="btn btn-primary btn-xs" href="{{ route('task_show', ['id' => $task->id]) }}"><i class="fas fa-eye"></i>View</a>
               {{--   <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Template</a>
                 <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Partial</a>
                 <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Form Builder</a>

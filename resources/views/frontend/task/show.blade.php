@@ -3,7 +3,7 @@
 <section class="content">
   <div class="card">
     <div class="card-header">
-      <a href="{{ route('project_show', ['id' => $task->project->id]) }}" title="">
+      <a href="{{ route('project_show', ['id' => $task->project_id]) }}" title="">
       <button type="button" class="btn btn-default btn-sm collapsed">{{ $task->project->name }}</button>  <i class="fa fa-fw fa-angle-double-right"></i>
       </a>
       <button type="button" class="btn btn-default btn-sm collapsed">{{ $task->name }}</button> <i class="fa fa-fw fa-angle-double-right"></i>
@@ -109,7 +109,7 @@
                 <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Partial</a>
                 <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Schema</a>
                 <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Form Builder</a>
-                <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Model</a>
+                <a class="btn btn-info btn-xs" href="#"> <i c3lass="fas fa-plus"></i> Model</a>
                 <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Util</a>
                 <a class="btn btn-info btn-xs" href="#"> <i class="fas fa-plus"></i> Custom func</a>
                 <a class="btn btn-info btn-xs" href="{{ route('action_edit', ['t_id' => $action->task_id, 'id' => $action->id]) }}"> <i class="fas fa-pencil-alt"></i> Edit</a>
