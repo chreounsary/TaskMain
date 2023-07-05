@@ -23,15 +23,17 @@
             <td>{{ $project->name }}</td>
             <td>{{ $project->description }}</td>
             <td>
-              <a href="{{ route('project_edit', ['id' => $project->id]) }}" class="btn btn-warning btn-sm">
-                <i class="fas fa-edit"></i>
-              </a>
-              <a href="{{ route('project_destroy', ['id' => $project->id]) }}" class="btn btn-danger btn-sm">
-                <i class="fas fa-trash"></i>
-              </a>
-              <a href="{{ route('task_create', ['project_id' => $project->id]) }}" class="btn btn-danger btn-sm">
-                <i class="fas fa-plus"></i>
-              </a>
+              @if(auth()->check())
+                <a href="{{ route('project_edit', ['id' => $project->id]) }}" class="btn btn-warning btn-sm">
+                  <i class="fas fa-edit"></i>
+                </a>
+                <a href="{{ route('project_destroy', ['id' => $project->id]) }}" class="btn btn-danger btn-sm">
+                  <i class="fas fa-trash"></i>
+                </a>
+                <a href="{{ route('task_create', ['project_id' => $project->id]) }}" class="btn btn-danger btn-sm">
+                  <i class="fas fa-plus"></i>
+                </a>
+              @endif
               <a href="{{ route('project_show', ['id' => $project->id]) }}" class="btn btn-info btn-sm">
                 <i class="fas fa-eye"></i>
               </a>

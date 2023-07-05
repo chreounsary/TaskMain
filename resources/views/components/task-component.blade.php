@@ -22,16 +22,19 @@
                 <td>{{ Str::limit($task->description, $limit = 20, $end = '...') }}</td>
                 <td>{{ $task->project->name }}</td>
                 <td>
-                  <a href="{{ route('task_edit', ['id' => $task->id]) }}" class="btn btn-warning btn-sm">
-                    <i class="fas fa-edit"></i>
-                  </a>
-                  <a href="{{ route('task_destroy', ['id' => $task->id]) }}" class="btn btn-danger btn-sm">
-                    <i class="fas fa-trash"></i>
-                  </a>
+                  @if(auth()->check())
+                    <a href="{{ route('task_edit', ['id' => $task->id]) }}" class="btn btn-warning btn-sm">
+                      <i class="fas fa-edit"></i>
+                    </a>
+                    <a href="{{ route('task_destroy', ['id' => $task->id]) }}" class="btn btn-danger btn-sm">
+                      <i class="fas fa-trash"></i>
+                    </a>
+                  @endif
                   <a href="{{ route('task_show', ['id' => $task->id]) }}" class="btn btn-info btn-sm">
                     <i class="fas fa-eye"></i>
                   </a>
                 </td>
+
               </tr>
             @endforeach
         @else
