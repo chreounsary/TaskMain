@@ -61,6 +61,7 @@
                  @endforeach
               </tbody>
             </table>
+            {{ $tasks->links('custom-style-pager') }}
           </div>
         </div>
       </div>

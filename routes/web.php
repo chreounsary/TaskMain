@@ -208,4 +208,17 @@ Route::middleware(['auth'])->group(function () {
 
     Route::resource('yamls', YamlController::class);
 
+    // Route::group([
+    //     'prefix' => 'mail',
+    //     'as' => 'mail_'
+    // ], function () {
+    //     Route::get('/', [MailController::class, 'index'])->name('index');
+    //     Route::get('/new', [MailController::class, 'create'])->name('create');
+    //     Route::post('/store', [MailController::class, 'store'])->name('store');
+    //     Route::get('/show/{id}', [MailController::class, 'show'])->name('show');
+    //     Route::get('/edit/{id}', [MailController::class, 'edit'])->name('edit');
+    //     Route::put('/update/{id}', [MailController::class, 'update'])->name('update');
+    //     Route::get('/delete/{id}', [MailController::class, 'destroy'])->name('destroy');
+    // });
+
 });
