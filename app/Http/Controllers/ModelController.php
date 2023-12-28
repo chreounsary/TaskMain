@@ -8,6 +8,11 @@ use App\Models\Models;
 
 class ModelController extends Controller
 {
+    public function index($value='')
+    {
+        dd('ddd');
+    }
+    
     public function create(Request $request)
     {
         $action = Action::find($request->action_id);

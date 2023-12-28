@@ -221,4 +221,17 @@ Route::middleware(['auth'])->group(function () {
     //     Route::get('/delete/{id}', [MailController::class, 'destroy'])->name('destroy');
     // });
 
+
+    Route::group(['prefix' => 'mase'], function () {
+        Route::get('/', [MailController::class, 'index'])->name('index');
+        Route::group([
+            'prefix' => 'task',
+            'as' => 'task_'
+        ], function () {
+            Route::get('/', [ModelController::class, 'index'])->name('index');
+        });
+
+    });
+
+
 });
